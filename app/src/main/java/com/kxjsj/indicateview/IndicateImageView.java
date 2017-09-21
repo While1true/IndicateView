@@ -50,7 +50,6 @@ public class IndicateImageView extends android.support.v7.widget.AppCompatImageV
     }
 
     RectF rect = new RectF();
-    Rect bounds=new Rect();
     @Override
     public void onDrawForeground(Canvas canvas) {
         super.onDrawForeground(canvas);
@@ -76,7 +75,7 @@ public class IndicateImageView extends android.support.v7.widget.AppCompatImageV
          * 右上角
          * draw背景
          */
-
+        paint.setTextSize(indicatesize);
         float v = paint.measureText(indicate + "");
         rect.set(width - v - indicateRadius * 2, 0, width, indicateRadius * 2);
         canvas.drawRoundRect(rect, indicateRadius, indicateRadius, paint);
@@ -84,14 +83,12 @@ public class IndicateImageView extends android.support.v7.widget.AppCompatImageV
          * 画数字
          */
         paint.setColor(indicateTextColor);
-        paint.setTextSize(indicatesize);
         /**
          * 计算基线位置
          */
         Paint.FontMetrics fm = paint.getFontMetrics();
         float baseLineY = indicateRadius - (fm.ascent - (fm.ascent - fm.descent) / 2);
-        paint.getTextBounds(indicate+"",0,(indicate+"").length(),bounds);
-        canvas.drawText(indicate + "",width - bounds.right/2 - (indicateRadius+v/2), baseLineY, paint);
+        canvas.drawText(indicate + "",width - (indicateRadius+v), baseLineY, paint);
 
     }
 
