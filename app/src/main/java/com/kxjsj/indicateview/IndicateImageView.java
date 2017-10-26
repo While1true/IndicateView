@@ -51,8 +51,8 @@ public class IndicateImageView extends android.support.v7.widget.AppCompatImageV
 
     RectF rect = new RectF();
     @Override
-    public void onDrawForeground(Canvas canvas) {
-        super.onDrawForeground(canvas);
+    public void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
         /**
          * 等于0不画
          */

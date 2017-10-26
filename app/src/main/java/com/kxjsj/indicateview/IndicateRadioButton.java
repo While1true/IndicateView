@@ -51,8 +51,8 @@ public class IndicateRadioButton extends android.support.v7.widget.AppCompatRadi
 
     RectF rect = new RectF();
     @Override
-    public void onDrawForeground(Canvas canvas) {
-        super.onDrawForeground(canvas);
+    public void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
         if (indicate == 0) {
             return;
         }
