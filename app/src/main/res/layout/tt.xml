@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+<TextView
+    android:id="@+id/tv"
+    android:text="年底时"
+    android:background="#f00"
+    android:layout_margin="3dp"
+    android:layout_width="100dp"
+    android:textColor="#fff"
+    android:layout_height="100dp" />
+</FrameLayout>
